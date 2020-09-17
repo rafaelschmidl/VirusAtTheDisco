@@ -21,13 +21,11 @@ namespace VirusAtTheDisco
             {
                 if (hours == 0)
                 {
-                    //Console.SetCursorPosition(0, 1);
                     Console.WriteLine("\n" + peopleAttendingDisco + " people are at a disco.");
                     Console.WriteLine("One person at the disco has a contagious virus...");
-
                 }
 
-                Console.WriteLine("\nEvery hour the virus will spread from one person with the virus to one other person without the infection.");
+                Console.WriteLine("\nEvery hour the virus will spread from a person with the virus to one other person without the infection.");
                 Console.WriteLine("After five houers the infected person will become imune and stop spreading the virus.");
 
                 Console.SetCursorPosition(0, Console.WindowHeight - 2);
@@ -37,9 +35,9 @@ namespace VirusAtTheDisco
 
                 if (keyInfo.KeyChar == 'n')
                 {
-                    Console.Clear();
                     infectedDisco.NextHour();
                     hours++;
+                    Console.Clear();
                     Console.SetCursorPosition(0, 1);
                     Console.WriteLine("Hours since the spread of infection started: " + hours);
                     Console.WriteLine("Persons Infected at the disco: " + infectedDisco.AllPersonsInfected);
